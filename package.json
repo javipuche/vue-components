@@ -2,7 +2,7 @@
   "name": "vue-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "src/index.js",
   "scripts": {
     "dev": "rimraf dist && webpack-dev-server",
     "build": "rimraf dist && webpack --production --progress && rimraf dist/assets/css/**/*.js"

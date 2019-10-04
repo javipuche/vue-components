@@ -11,8 +11,8 @@ const webpackConfig = () => {
     let options = {
         stats: 'minimal',
         entry: {
-            styles: './src/assets/scss/styles.scss',
-            bundle: './src/main.js'
+            styles: './src/scss/styles.scss',
+            docs: './docs/main.js'
         },
         output: {
             path: resolve('./dist'),
@@ -22,7 +22,8 @@ const webpackConfig = () => {
         resolve: {
             extensions: ['.js', '.json', '.vue', '.scss'],
             alias: {
-                '@': resolve('./src'),
+                '@': resolve('./docs'),
+                '@lib': resolve('./src'),
                 node_modules: resolve('./node_modules')
             }
         },
@@ -31,7 +32,7 @@ const webpackConfig = () => {
                 {
                     test: /\.vue$/,
                     loader: 'vue-loader',
-                    include: [resolve('./src')]
+                    include: [resolve('./docs')]
                 },
                 {
                     test: /\.js$/,
@@ -46,7 +47,13 @@ const webpackConfig = () => {
                     use: [
                         'vue-style-loader',
                         'style-loader',
-                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                hmr: !isProduction,
+                                reloadAll: true
+                            }
+                        },
                         {
                             loader: 'css-loader',
                             options: {
@@ -75,7 +82,7 @@ const webpackConfig = () => {
                                 sassOptions: {
                                     outputStyle: isProduction ? 'compressed' : 'expanded',
                                     includePaths: [
-                                        resolve('./src/assets/scss')
+                                        resolve('./src/scss')
                                     ]
                                 }
                             }
@@ -124,7 +131,7 @@ const webpackConfig = () => {
                 filename: `css/[name].css`
             }),
             new HtmlWebpackPlugin({
-                template: './src/index.html',
+                template: './docs/index.html',
                 filename: 'index.html'
             }),
             new VueLoaderPlugin()
