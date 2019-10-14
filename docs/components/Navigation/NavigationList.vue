@@ -1,8 +1,10 @@
 <template>
-    <ul>
-        <li v-for="item in items" :key="item.id">
-            <a :href="item.url.hash ? item.url.name + item.url.hash : item.url.name">{{ item.title }}</a>
-            <NavigationList vif="item.children" :items="item.children" />
+    <ul class="c-nav__list">
+        <li v-for="item in items" :key="item.id" class="c-nav__item">
+            <RouterLink :to="item.url" class="c-nav__link">
+                {{ item.title }}
+            </RouterLink>
+            <NavigationList v-if="item.children" :items="item.children" />
         </li>
     </ul>
 </template>
@@ -20,5 +22,42 @@
 </script>
 
 <style lang="scss" scoped>
+  .c-nav {
+    $this: &;
 
+    &__list {
+      margin-bottom: 40px;
+
+      #{$this}__list {
+        margin-bottom: 0;
+        padding-left: 16px;
+      }
+    }
+
+    &__item {
+      #{$this}__item {
+        #{$this}__link {
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__link {
+      line-height: 1.4;
+      font-weight: 600;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      display: block;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &.is-active {
+        color: var(--color-secondary);
+      }
+    }
+  }
 </style>

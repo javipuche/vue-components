@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/Index.vue'
+import Test from '@/pages/Test.vue'
 
 Vue.use(Router)
 
 export default new Router({
     mode: 'history',
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-active-exact',
     scrollBehavior (to, from, savedPosition) {
         if (to.hash) {
             return { selector: to.hash }
@@ -20,6 +23,11 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Index
+        },
+        {
+            path: '/test',
+            name: 'test',
+            component: Test
         }
     ]
 })

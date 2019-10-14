@@ -53,9 +53,6 @@
             window.removeEventListener('click', this.close)
         },
         methods: {
-            onClickOutside (event) {
-                console.log(this.$refs)
-            },
             onKeyup () {
                 this.results = []
                 this.search ? this.filterResults(this.navigation) : this.arrowCounter = -1
@@ -90,8 +87,11 @@
             },
             filterResults (items, parent = undefined) {
                 items.forEach(item => {
-                    const match = item.title.toLowerCase().includes(this.search.toLowerCase())
-                    if (match) this.results.push({ title: item.title, url: item.url, parent: parent })
+                    if (item.title) {
+                        const match = item.title.toLowerCase().includes(this.search.toLowerCase())
+                        if (match) this.results.push({ title: item.title, url: item.url, parent: parent })
+                    }
+
                     if (item.children) this.filterResults(item.children, item.title)
                 })
             }
@@ -103,7 +103,6 @@
   .c-search {
     $this: &;
 
-    background-color: var(--color-shade-0);
     border-radius: var(--radius-s);
     position: relative;
 
@@ -113,6 +112,7 @@
 
     &__element {
       border: 1px solid var(--color-border);
+      background-color: var(--color-shade-0);
       height: 32px;
       border-radius: 20px;
       padding-left: 40px;
@@ -145,10 +145,11 @@
       display: none;
       position: absolute;
       top: calc(100% + 4px);
-      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: var(--color-shade-0);
-      width: calc(100vw - 32px);
-      max-width: 440px;
+      width: 100%;
+      max-width: 288px;
       border-radius: var(--radius-s);
 
       &.is-active {

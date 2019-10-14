@@ -1,47 +1,54 @@
 module.exports = {
     navigation: [
         {
-            title: 'Guide',
-            url: { name: 'home' },
+            group: 'Instalación',
             children: [
                 {
-                    title: 'Introduction',
-                    url: { name: 'test' },
-                    children: [
-                        { title: 'How It Works', url: { name: 'test', hash: '#how' } },
-                        { title: 'Faturfeaes', url: { name: 'test', hash: '#faturfeaes' } },
-                        { title: 'Features', url: { name: 'test', hash: '#features' } }
-                    ]
+                    title: 'Start',
+                    url: { name: 'home' }
                 },
                 {
-                    title: 'Getting Started',
-                    url: { name: 'home' },
-                    children: [
-                        { title: 'Global Installation', url: { name: 'home' } },
-                        { title: 'Inside an Existing Project', url: { name: 'home' } }
-                    ]
+                    title: 'Customization',
+                    url: { name: 'test' }
                 }
             ]
         },
         {
-            title: 'Maria',
-            url: { name: 'test' },
+            group: 'Componentes',
             children: [
                 {
-                    title: 'Cristobal',
-                    url: { name: 'home' },
+                    title: 'Button',
+                    url: { name: 'test' }
+                },
+                {
+                    title: 'Collapse',
+                    url: { name: 'test' }
+                },
+                {
+                    title: 'Form controls',
+                    url: { name: 'test' },
                     children: [
-                        { title: 'Loli', url: { name: 'home' } },
-                        { title: 'Juan', url: { name: 'home' } }
+                        {
+                            title: 'Autocomplete',
+                            url: { name: 'test', hash: '#caca' }
+                        },
+                        {
+                            title: 'Checkbox',
+                            url: { name: 'test', hash: '#caca2' }
+                        },
+                        {
+                            title: 'Clockpicker',
+                            url: { name: 'test', hash: '#caca3' }
+                        }
                     ]
                 },
                 {
-                    title: 'Vicenta',
-                    url: { name: 'home' },
-                    children: [
-                        { title: 'Globalizacion', url: { name: 'home' } },
-                        { title: 'Pokemon', url: { name: 'home' } }
-                    ]
+                    title: 'Icon',
+                    url: { name: 'test' }
+                },
+                {
+                    title: 'Loading',
+                    url: { name: 'test' }
                 }
             ]
         }

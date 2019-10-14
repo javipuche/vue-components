@@ -5,11 +5,7 @@
         :class="{ 'is-active' : isBurgerActive }"
         @click.prevent="toggle"
     >
-        <span class="c-hamburger__box">
-            <span class="c-hamburger__top"></span>
-            <span class="c-hamburger__center"></span>
-            <span class="c-hamburger__bottom"></span>
-        </span>
+        <span class="c-hamburger__icon fas fa-angle-left"></span>
     </button>
 </template>
 
@@ -34,16 +30,34 @@
   .c-hamburger {
     $this: &;
 
+    background-color: var(--color-shade-100);
+    color: var(--color-shade-500);
     width: 1.4em;
-    height: 1em;
+    height: 2.4em;
     cursor: pointer;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
+    border-top-left-radius: 1.4em;
+    border-bottom-left-radius: 1.4em;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-shade-0);
+    }
+
+    &__icon {
+      transform: translateX(1px);
+    }
 
     &__box {
       width: 1.4em;
-      height: 1em;
+      height: 2.4em;
       position: relative;
       display: block;
       z-index: 1;

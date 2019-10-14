@@ -1,7 +1,5 @@
 <template>
     <div class="c-layout">
-        <Header class="c-layout__header" />
-
         <div class="c-layout__inner">
             <Sidebar class="c-layout__sidebar" />
 
@@ -30,12 +28,6 @@
     display: flex;
     flex-direction: column;
 
-    &__header {
-      position: sticky;
-      top: 0;
-      z-index: var(--z-index-bishop);
-    }
-
     &__inner {
       display: flex;
       flex-grow: 1;
@@ -45,12 +37,16 @@
       transition: all 0.3s;
       z-index: var(--z-index-knight);
       width: 320px;
+      flex-shrink: 0;
+      max-height: 100vh;
+      position: sticky;
+      top: 0;
 
       @include breakpoint(l down) {
         position: fixed;
-        top: 56px;
+        top: 0;
         left: 0;
-        height: calc(100vh - 64px);
+        height: 100vh;
         transform: translateX(-100%);
         will-change: transform;
       }
@@ -76,6 +72,7 @@
       flex-grow: 1;
       padding: 16px;
       z-index: var(--z-index-pawn);
+      min-width: 1px;
 
       @include breakpoint(m) {
         padding: 40px;

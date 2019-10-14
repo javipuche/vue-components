@@ -16,7 +16,7 @@ const webpackConfig = () => {
         },
         output: {
             path: resolve('./dist'),
-            filename: `js/[name].js`,
+            filename: 'js/[name].js',
             publicPath: '/'
         },
         resolve: {
@@ -32,7 +32,7 @@ const webpackConfig = () => {
                 {
                     test: /\.vue$/,
                     loader: 'vue-loader',
-                    include: [resolve('./docs')]
+                    include: [resolve('./docs'), resolve('./src')]
                 },
                 {
                     test: /\.js$/,
@@ -128,7 +128,7 @@ const webpackConfig = () => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: `css/[name].css`
+                filename: 'css/[name].css'
             }),
             new HtmlWebpackPlugin({
                 template: './docs/index.html',

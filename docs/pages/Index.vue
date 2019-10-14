@@ -1,6 +1,8 @@
 <template>
     <Layout>
-        home
+        <p style="height: 5000px;">
+            home
+        </p>
     </Layout>
 </template>
 

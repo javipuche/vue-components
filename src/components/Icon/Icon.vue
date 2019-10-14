@@ -1,6 +1,7 @@
 <template>
     <span class="c-icon" :class="icon && `c-icon--${icon}`">
         <img src="@/assets/images/logos/muchoviaje.png" alt="">
+        <h1>sadasd</h1>
     </span>
 </template>
 

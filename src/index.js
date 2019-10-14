@@ -1,6 +1,6 @@
 import * as components from './components'
 
-const ComponentLibrary = {
+const PegasusComponents = {
     install (Vue, options = {}) {
         for (const componentName in components) {
             const component = components[componentName]
@@ -10,8 +10,8 @@ const ComponentLibrary = {
 }
 
 export * from './components'
-export default ComponentLibrary
+export default PegasusComponents
 
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(ComponentLibrary)
+    window.Vue.use(PegasusComponents)
 }
