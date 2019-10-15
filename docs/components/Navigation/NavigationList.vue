@@ -26,11 +26,11 @@
     $this: &;
 
     &__list {
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
 
       #{$this}__list {
         margin-bottom: 0;
-        padding-left: 16px;
+        padding-left: 1rem;
       }
     }
 
@@ -45,8 +45,8 @@
     &__link {
       line-height: 1.4;
       font-weight: 600;
-      padding-top: 4px;
-      padding-bottom: 4px;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
       display: block;
 
       &:active,

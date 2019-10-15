@@ -11,12 +11,10 @@
 </template>
 
 <script>
-    import Header from '@/components/Header/Header.vue'
     import Sidebar from '@/components/Sidebar/Sidebar.vue'
 
     export default {
         components: {
-            Header,
             Sidebar
         }
     }
@@ -35,8 +33,8 @@
 
     &__sidebar {
       transition: all 0.3s;
-      z-index: var(--z-index-knight);
-      width: 320px;
+      z-index: 2;
+      width: 20rem;
       flex-shrink: 0;
       max-height: 100vh;
       position: sticky;
@@ -70,12 +68,12 @@
 
     &__content {
       flex-grow: 1;
-      padding: 16px;
-      z-index: var(--z-index-pawn);
-      min-width: 1px;
+      padding: 1rem;
+      z-index: 1;
+      min-width: 0.0625rem;
 
       @include breakpoint(m) {
-        padding: 40px;
+        padding: 2.5rem;
       }
     }
   }

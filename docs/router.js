@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/Index.vue'
 import Test from '@/pages/Test.vue'
+import ComponentPreview from '@/pages/ComponentPreview.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
             path: '/test',
             name: 'test',
             component: Test
+        },
+        {
+            path: '/component/:componentName',
+            name: 'ComponentPreview',
+            component: ComponentPreview
         }
     ]
 })

@@ -12,7 +12,7 @@ const webpackConfig = () => {
         stats: 'minimal',
         entry: {
             styles: './src/scss/styles.scss',
-            docs: './docs/main.js'
+            docs: ['./docs/assets/scss/docs.scss', './docs/main.js']
         },
         output: {
             path: resolve('./dist'),

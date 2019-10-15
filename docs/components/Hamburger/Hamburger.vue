@@ -30,10 +30,10 @@
   .c-hamburger {
     $this: &;
 
-    background-color: var(--color-shade-100);
-    color: var(--color-shade-500);
-    width: 1.4em;
-    height: 2.4em;
+    background-color: #f2f2f2;
+    color: #bfbfbf;
+    width: 1em;
+    height: 6em;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -48,16 +48,12 @@
     &:focus,
     &:hover {
       background-color: var(--color-secondary);
-      color: var(--color-shade-0);
-    }
-
-    &__icon {
-      transform: translateX(1px);
+      color: #fff;
     }
 
     &__box {
-      width: 1.4em;
-      height: 2.4em;
+      width: 1em;
+      height: 6em;
       position: relative;
       display: block;
       z-index: 1;

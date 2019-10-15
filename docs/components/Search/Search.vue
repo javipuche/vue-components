@@ -103,29 +103,30 @@
   .c-search {
     $this: &;
 
-    border-radius: var(--radius-s);
+    border-radius: 0.25em;
     position: relative;
+    font-size: 1em;
 
     &__inner {
       position: relative;
     }
 
     &__element {
-      border: 1px solid var(--color-border);
-      background-color: var(--color-shade-0);
-      height: 32px;
-      border-radius: 20px;
-      padding-left: 40px;
-      padding-right: 16px;
-      font-size: 14px;
+      border: 0.0625rem solid var(--color-border);
+      background-color: #fff;
+      height: 2.286em;
+      border-radius: 1.429em;
+      padding-left: 2.857em;
+      padding-right: 1.143em;
+      font-size: 0.875em;
       color: currentColor;
       outline: none;
       width: 100%;
       transition: all 0.3s;
-      padding-bottom: 2px;
+      padding-bottom: 0.1429em;
 
       &:focus {
-        border-color: var(--color-primary);
+        border-color: var(--color-secondary);
       }
     }
 
@@ -134,23 +135,25 @@
       color: var(--color-icons);
       position: absolute;
       top: 50%;
-      left: 16px;
+      left: 1em;
       transform: translateY(-50%);
-      font-size: 16px;
+      font-size: 1em;
     }
 
     &__list {
-      padding: 4px;
-      border: 1px solid var(--color-border);
+      padding: 0.25rem;
+      border: 0.0625rem solid var(--color-border);
       display: none;
       position: absolute;
-      top: calc(100% + 4px);
+      top: calc(100% + 0.25rem);
       left: 50%;
       transform: translateX(-50%);
-      background-color: var(--color-shade-0);
+      background-color: #fff;
       width: 100%;
-      max-width: 288px;
-      border-radius: var(--radius-s);
+      max-width: 18rem;
+      max-height: 25rem;
+      overflow-y: auto;
+      border-radius: 0.25rem;
 
       &.is-active {
         display: block;
@@ -159,19 +162,18 @@
 
     &__item {
       line-height: 1.4;
-      color: var(--color-shade-1500);
-      border-radius: var(--radius-s);
+      border-radius: 0.25em;
 
       &.is-active {
-        background-color: var(--color-shade-100);
-        color: var(--color-primary);
+        background-color: #f2f2f2;
+        color: var(--color-secondary);
       }
     }
 
     &__link {
       display: block;
-      font-size: 15px;
-      padding: 8px;
+      font-size: 0.9375em;
+      padding: 0.5333em;
     }
 
     &__parent {
@@ -180,7 +182,7 @@
 
       & + #{$this}__text {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 0.875em;
         display: inline-block;
       }
     }

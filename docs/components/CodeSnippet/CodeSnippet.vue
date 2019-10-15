@@ -1,5 +1,5 @@
 <template>
-    <div class="c-code">
+    <div class="c-docs-code">
         <pre><code id="code-snippet"><slot></slot></code></pre>
     </div>
 </template>
@@ -27,17 +27,20 @@
     }
 </script>
 
-<style lang="scss" scoped>
-  .c-code {
+<style lang="scss">
+  .c-docs-code {
     max-width: 100%;
+    max-height: 40rem;
     overflow: auto;
-    padding: 24px;
+    padding: 2rem 1.5rem;
     display: flex;
+    background-color: #f7f7f7;
+    line-height: 1.8;
 
     &::after {
       content: "";
       display: block;
-      width: 24px;
+      width: 1.5rem;
       flex-shrink: 0;
     }
   }

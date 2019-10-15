@@ -27,15 +27,15 @@
 
 <style lang="scss" scoped>
   .c-nav {
-    min-width: 320px;
-    padding: 24px;
+    min-width: 19.94rem;
+    padding: 1.5rem;
 
     &__group {
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 16px;
-      color: var(--color-shade-800);
+      font-size: 0.875em;
+      margin-bottom: 1.143em;
+      color: #999;
     }
   }
 </style>
