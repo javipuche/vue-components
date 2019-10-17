@@ -1,8 +1,7 @@
 <template>
-    <span class="c-icon" :class="icon && `c-icon--${icon}`">
-        <img src="@/assets/images/logos/muchoviaje.png" alt="">
-        <h1>sadasd</h1>
-    </span>
+    <component :is="tag" class="c-icon" :class="icon && `c-icon--${icon}`">
+        <slot />
+    </component>
 </template>
 
 <script>
@@ -10,8 +9,12 @@
         name: 'Icon',
         props: {
             icon: {
-                type: String,
+                type: [String, Boolean],
                 default: undefined
+            },
+            tag: {
+                type: String,
+                default: 'span'
             }
         }
     }
@@ -19,6 +22,6 @@
 
 <style lang="scss">
   .c-icon {
-    color: red;
+    display: block;
   }
 </style>

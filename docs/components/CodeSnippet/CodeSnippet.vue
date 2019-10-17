@@ -5,23 +5,45 @@
 </template>
 
 <script>
-    import beautifyHtml from 'js-beautify'
+    import beautify from 'js-beautify'
     import hljs from 'highlight.js'
     import 'highlight.js/styles/github.css'
 
     export default {
         name: 'CodeSnippet',
+        props: {
+            language: {
+                type: String,
+                default: 'html'
+            }
+        },
         mounted: function () {
             const code = this.$el.querySelector('#code-snippet')
-            const renderedCode = this.renderCodeSnippet(beautifyHtml.html(code.innerHTML, {
-                preserve_newlines: false,
-                inline: []
-            }))
-            code.innerHTML = renderedCode
+            code.innerHTML = this.beautifyCode(code)
         },
         methods: {
-            renderCodeSnippet: function (code, language = 'html') {
+            renderCodeSnippet: function (code, language) {
                 return hljs.highlight(language, code).value
+            },
+            beautifyCode (code) {
+                let beautifyCode
+
+                if (this.language === 'html') {
+                    beautifyCode = beautify.html(code.innerHTML, {
+                        preserve_newlines: false,
+                        inline: []
+                    })
+                }
+
+                if (this.language === 'js' || this.language === 'javascript') {
+                    beautifyCode = beautify(code.innerHTML)
+                }
+
+                if (this.language === 'css') {
+                    beautifyCode = beautify.css(code.innerHTML)
+                }
+
+                return this.renderCodeSnippet(beautifyCode, this.language)
             }
         }
     }
@@ -36,6 +58,8 @@
     display: flex;
     background-color: #f7f7f7;
     line-height: 1.8;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
     &::after {
       content: "";

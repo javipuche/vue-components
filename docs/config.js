@@ -1,54 +1,20 @@
 module.exports = {
     navigation: [
         {
-            group: 'Instalación',
+            group: 'Getting Started',
             children: [
                 {
-                    title: 'Start',
-                    url: { name: 'home' }
-                },
-                {
-                    title: 'Customization',
-                    url: { name: 'test' }
+                    title: 'Installation',
+                    url: { name: 'Home' }
                 }
             ]
         },
         {
-            group: 'Componentes',
+            group: 'UI Components',
             children: [
                 {
-                    title: 'Button',
-                    url: { name: 'test' }
-                },
-                {
-                    title: 'Collapse',
-                    url: { name: 'test' }
-                },
-                {
-                    title: 'Form controls',
-                    url: { name: 'test' },
-                    children: [
-                        {
-                            title: 'Autocomplete',
-                            url: { name: 'test', hash: '#caca' }
-                        },
-                        {
-                            title: 'Checkbox',
-                            url: { name: 'test', hash: '#caca2' }
-                        },
-                        {
-                            title: 'Clockpicker',
-                            url: { name: 'test', hash: '#caca3' }
-                        }
-                    ]
-                },
-                {
                     title: 'Icon',
-                    url: { name: 'test' }
-                },
-                {
-                    title: 'Loading',
-                    url: { name: 'test' }
+                    url: { name: 'Icon' }
                 }
             ]
         }

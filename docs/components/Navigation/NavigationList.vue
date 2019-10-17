@@ -1,7 +1,7 @@
 <template>
     <ul class="c-nav__list">
         <li v-for="item in items" :key="item.id" class="c-nav__item">
-            <RouterLink :to="item.url" class="c-nav__link">
+            <RouterLink :to="item.url" class="c-nav__link" exact>
                 {{ item.title }}
             </RouterLink>
             <NavigationList v-if="item.children" :items="item.children" />

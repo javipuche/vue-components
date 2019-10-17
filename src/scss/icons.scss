@@ -1,6 +1,12 @@
-/* -----------------------------------------------------------------------------
- * ICONS
- */
+@font-face {
+  font-family: 'Icons';
+  src:
+    url('~@/assets/fonts/icons.woff2') format('woff2'),
+    url('~@/assets/fonts/icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @mixin f-icons {
   --icon-info: "\e92a";
@@ -485,3 +491,29 @@ $f-icons: (
   'repeat-sound': var(--icon-repeat-sound),
   'flight-hotel': var(--icon-flight-hotel)
 ) !default;
+
+.c-icon {
+  --c-icon-color: currentColor;
+  --c-icon-font-family: 'Icons';
+
+  @include f-icons;
+
+  font-family: var(--c-icon-font-family);
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+
+  @each $class, $icon in $f-icons {
+    &--#{$class} {
+      --c-icon-unicode: #{$icon};
+
+      &::before {
+        content: var(--c-icon-unicode);
+        color: var(--c-icon-color, currentColor);
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@
         </div>
         <div class="c-sidebar__inner">
             <div class="c-sidebar__box">
-                <img class="c-sidebar__logo" src="https://d1yold88hsv6sw.cloudfront.net/resize/200x100/filters:quality(85):max_age(1209600)/s3/avoristravel/assets/img/logos/avorisLogo.png" alt="Logo">
+                <img class="c-sidebar__logo" src="@/assets/images/logos/avoris.svg" alt="Logo">
                 <Search class="c-sidebar__search" />
             </div>
             <Navigation />
@@ -68,7 +68,7 @@
     }
 
     &__box {
-      padding: 1rem;
+      padding: 2rem 1rem;
       position: sticky;
       top: 0;
       background-color: #fff;
@@ -76,7 +76,7 @@
     }
 
     &__logo {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
   }
 </style>

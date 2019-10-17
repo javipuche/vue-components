@@ -5,6 +5,8 @@
 
             <div class="c-layout__content">
                 <slot />
+
+                <Footer />
             </div>
         </div>
     </div>
@@ -12,10 +14,12 @@
 
 <script>
     import Sidebar from '@/components/Sidebar/Sidebar.vue'
+    import Footer from '@/components/Footer/Footer.vue'
 
     export default {
         components: {
-            Sidebar
+            Sidebar,
+            Footer
         }
     }
 </script>
@@ -39,30 +43,17 @@
       max-height: 100vh;
       position: sticky;
       top: 0;
+      will-change: width;
 
       @include breakpoint(l down) {
         position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
-        transform: translateX(-100%);
-        will-change: transform;
-      }
-
-      @include breakpoint(l) {
-        will-change: width;
       }
 
       &:not(.is-active) {
-        @include breakpoint(l) {
-          width: 0;
-        }
-      }
-
-      &.is-active {
-        @include breakpoint(l down) {
-          transform: translateX(0);
-        }
+        width: 0;
       }
     }
 

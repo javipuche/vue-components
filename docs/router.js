@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+import EmptyRoute from '@/pages/EmptyRoute.vue'
+
+// Home
 import Index from '@/pages/Index.vue'
-import Test from '@/pages/Test.vue'
-import ComponentPreview from '@/pages/ComponentPreview.vue'
+
+// Components
+import Icon from '@/pages/Components/Icon.vue'
 
 Vue.use(Router)
 
@@ -22,18 +27,19 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'home',
+            name: 'Home',
             component: Index
         },
         {
-            path: '/test',
-            name: 'test',
-            component: Test
-        },
-        {
-            path: '/component/:componentName',
-            name: 'ComponentPreview',
-            component: ComponentPreview
+            path: '/components',
+            component: EmptyRoute,
+            children: [
+                {
+                    path: 'icon',
+                    name: 'Icon',
+                    component: Icon
+                }
+            ]
         }
     ]
 })

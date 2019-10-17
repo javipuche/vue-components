@@ -11,6 +11,7 @@ const webpackConfig = () => {
     let options = {
         stats: 'minimal',
         entry: {
+            icons: './src/scss/icons.scss',
             styles: './src/scss/styles.scss',
             docs: ['./docs/assets/scss/docs.scss', './docs/main.js']
         },
