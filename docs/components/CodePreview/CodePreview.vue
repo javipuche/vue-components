@@ -252,9 +252,14 @@
 
           &__box {
             position: relative;
+            min-width: 1px;
+            display: flex;
+            flex-direction: column;
           }
 
           &__component {
+            min-width: 1px;
+
             &:not(.is-expanded) {
               border-bottom: 0.0625rem solid var(--color-secondary);
             }
@@ -263,6 +268,9 @@
           &__code {
             border-left: 0;
             max-height: none;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
 
             &:not(.is-active) {
               left: 0;
@@ -270,6 +278,12 @@
               position: absolute;
               width: 100%;
               height: 100%;
+            }
+          }
+
+          &__show {
+            &-box {
+              margin-top: auto;
             }
           }
         }

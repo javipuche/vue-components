@@ -3,19 +3,19 @@
  */
 
 @mixin f-spaces {
-  --space-3xs: #{px-to-em((2px))};
-  --space-2xs: #{px-to-em((4px))};
-  --space-xs: #{px-to-em((8px))};
-  --space-s: #{px-to-em((16px))};
-  --space-m: #{px-to-em((24px))};
-  --space-l: #{px-to-em((32px))};
-  --space-xl: #{px-to-em((40px))};
-  --space-2xl: #{px-to-em((48px))};
-  --space-3xl: #{px-to-em((56px))};
-  --space-4xl: #{px-to-em((64px))};
-  --space-5xl: #{px-to-em((72px))};
-  --space-6xl: #{px-to-em((80px))};
-  --space-7xl: #{px-to-em((88px))};
+  --space-3xs: #{em((2px))};
+  --space-2xs: #{em((4px))};
+  --space-xs: #{em((8px))};
+  --space-s: #{em((16px))};
+  --space-m: #{em((24px))};
+  --space-l: #{em((32px))};
+  --space-xl: #{em((40px))};
+  --space-2xl: #{em((48px))};
+  --space-3xl: #{em((56px))};
+  --space-4xl: #{em((64px))};
+  --space-5xl: #{em((72px))};
+  --space-6xl: #{em((80px))};
+  --space-7xl: #{em((88px))};
 }
 
 // Map

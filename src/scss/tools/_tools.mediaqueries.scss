@@ -8,7 +8,7 @@
   $_values: list-sort(map-values($_map));
 
   @each $_value in $_values {
-    @if px-to-em($_value) > px-to-em($_input) {
+    @if em($_value) > em($_input) {
       @return $_value;
     }
   }
@@ -20,11 +20,11 @@
 
 @function breakpoint-type($_value) {
   @if type-of($_value) == number {
-    @return px-to-em($_value);
+    @return em($_value);
   }
 
   @else if map-has-key($s-mq-breakpoints, $_value) {
-    @return px-to-em(map-get($s-mq-breakpoints, $_value));
+    @return em(map-get($s-mq-breakpoints, $_value));
   }
 
   @else if $_value == 'up' or $_value == 'down' or $_value == 'only' {
@@ -56,16 +56,16 @@
   }
 
   @else if $_breakpoint-direction == 'down' {
-    $_result: $_result + '(max-width: #{$_breakpoint - px-to-em(1px)})';
+    $_result: $_result + '(max-width: #{$_breakpoint - em(1px)})';
   }
 
   @else if $_breakpoint-direction == 'only' {
-    $_breakpoint-next: px-to-em(map-next-value($s-mq-breakpoints, $_breakpoint));
-    $_result: $_result + '(min-width: #{$_breakpoint}) and (max-width: #{$_breakpoint-next - px-to-em(1px)})';
+    $_breakpoint-next: em(map-next-value($s-mq-breakpoints, $_breakpoint));
+    $_result: $_result + '(min-width: #{$_breakpoint}) and (max-width: #{$_breakpoint-next - em(1px)})';
   }
 
   @else if type-of($_breakpoint-direction) == number and $_breakpoint < $_breakpoint-direction {
-    $_result: $_result + '(min-width: #{$_breakpoint}) and (max-width: #{$_breakpoint-direction - px-to-em(1px)})';
+    $_result: $_result + '(min-width: #{$_breakpoint}) and (max-width: #{$_breakpoint-direction - em(1px)})';
   }
 
   @else {

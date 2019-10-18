@@ -3,9 +3,9 @@
  */
 
 @mixin f-radiuses {
-  --radius-s: #{px-to-em((4px))};
-  --radius-m: #{px-to-em((8px))};
-  --radius-l: #{px-to-em((12px))};
+  --radius-s: #{em((4px))};
+  --radius-m: #{em((8px))};
+  --radius-l: #{em((12px))};
   --radius-circle: 50%;
 }
 

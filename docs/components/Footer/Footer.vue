@@ -1,6 +1,6 @@
 <template>
     <div class="c-footer s-docs">
-        <p>Esta página es de <strong>código abierto</strong>. ¿Viste un error o algo no está claro?<br><a href="https://github.com/avoristravel/pegasus-components" targer="_blank">Ayudanos a mejorar en GitHub</a></p>
+        <p>This page is <strong>open source</strong>. Noticed a typo or something's unclear?<br><a href="https://github.com/avoristravel/pegasus-components" targer="_blank">Improve this page on GitHub</a></p>
     </div>
 </template>
 

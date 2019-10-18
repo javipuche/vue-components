@@ -7,7 +7,9 @@ import EmptyRoute from '@/pages/EmptyRoute.vue'
 import Index from '@/pages/Index.vue'
 
 // Components
-import Icon from '@/pages/Components/Icon.vue'
+import Banner from '@/pages/components/Banner.vue'
+import Button from '@/pages/components/Button.vue'
+import Icon from '@/pages/components/Icon.vue'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
             path: '/components',
             component: EmptyRoute,
             children: [
+                {
+                    path: 'banner',
+                    name: 'Banner',
+                    component: Banner
+                },
+                {
+                    path: 'button',
+                    name: 'Button',
+                    component: Button
+                },
                 {
                     path: 'icon',
                     name: 'Icon',

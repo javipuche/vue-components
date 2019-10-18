@@ -3,27 +3,27 @@
  */
 
 @mixin f-font-sizes {
-  --font-size-body: #{px-to-em(16px)};
-  --font-size-3xs: #{px-to-em(8px)};
-  --font-size-2xs: #{px-to-em(10px)};
-  --font-size-xs: #{px-to-em(12px)};
-  --font-size-s: #{px-to-em(14px)};
-  --font-size-m: #{px-to-em(16px)};
-  --font-size-l: #{px-to-em(18px)};
-  --font-size-xl: #{px-to-em(20px)};
-  --font-size-2xl: #{px-to-em(24px)};
-  --font-size-3xl: #{px-to-em(28px)};
-  --font-size-4xl: #{px-to-em(32px)};
-  --font-size-5xl: #{px-to-em(36px)};
-  --font-size-6xl: #{px-to-em(40px)};
-  --font-size-7xl: #{px-to-em(44px)};
-  --font-size-8xl: #{px-to-em(48px)};
-  --font-size-9xl: #{px-to-em(52px)};
-  --font-size-10xl: #{px-to-em(56px)};
-  --font-size-11xl: #{px-to-em(60px)};
-  --font-size-12xl: #{px-to-em(64px)};
-  --font-size-13xl: #{px-to-em(68px)};
-  --font-size-14xl: #{px-to-em(72px)};
+  --font-size-body: #{em(16px)};
+  --font-size-3xs: #{em(8px)};
+  --font-size-2xs: #{em(10px)};
+  --font-size-xs: #{em(12px)};
+  --font-size-s: #{em(14px)};
+  --font-size-m: #{em(16px)};
+  --font-size-l: #{em(18px)};
+  --font-size-xl: #{em(20px)};
+  --font-size-2xl: #{em(24px)};
+  --font-size-3xl: #{em(28px)};
+  --font-size-4xl: #{em(32px)};
+  --font-size-5xl: #{em(36px)};
+  --font-size-6xl: #{em(40px)};
+  --font-size-7xl: #{em(44px)};
+  --font-size-8xl: #{em(48px)};
+  --font-size-9xl: #{em(52px)};
+  --font-size-10xl: #{em(56px)};
+  --font-size-11xl: #{em(60px)};
+  --font-size-12xl: #{em(64px)};
+  --font-size-13xl: #{em(68px)};
+  --font-size-14xl: #{em(72px)};
 }
 
 // Map

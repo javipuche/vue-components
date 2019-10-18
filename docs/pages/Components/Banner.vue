@@ -1,11 +1,16 @@
 <template>
     <Layout>
         <Markdown>
-            # Icon
+            # Banner
         </Markdown>
 
         <CodePreview :vertical="true">
-            <AtIcon icon="phone" />
+            <AtBanner text="Button">
+                <div class="c-banner__title">
+                    asdadasd
+                </div>
+                <AtButton text="Leer más" :inverted="true" size="small" />
+            </AtBanner>
         </CodePreview>
     </Layout>
 </template>

@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: 'Icon',
+        name: 'AtIcon',
         props: {
             icon: {
                 type: [String, Boolean],
@@ -22,6 +22,6 @@
 
 <style lang="scss">
   .c-icon {
-    display: block;
+    display: inline-block;
   }
 </style>
