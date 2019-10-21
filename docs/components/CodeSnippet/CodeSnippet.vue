@@ -19,6 +19,7 @@
         },
         mounted: function () {
             const code = this.$el.querySelector('#code-snippet')
+            code.innerHTML = code.innerHTML.replace(/<!---->/g, '')
             code.innerHTML = this.beautifyCode(code)
         },
         methods: {

@@ -6,20 +6,43 @@
             The classic button, in different colors, sizes, and states.
         </Markdown>
 
-        <CodePreview :vertical="true">
-            <AtButton text="Button" size="tiny" />
-            <AtButton text="Button" size="small" />
+        <CodePreview vertical>
             <AtButton text="Button" />
-            <AtButton text="Button" size="medium" />
-            <AtButton text="Button" size="large" />
         </CodePreview>
 
-        <CodePreview :vertical="true">
-            <AtButton text="Button" :inverted="true" />
+        <Markdown>
+            ## Types and states
+        </Markdown>
+
+        <CodePreview vertical>
+            <AtButton text="Default" />
+            <AtButton text="Outlined" outlined />
+            <AtButton text="Disabled" disabled tag="button" />
         </CodePreview>
+
+        <Markdown>
+            ## Icons
+        </Markdown>
 
         <CodePreview :vertical="true">
             <AtButton icon="avatar" />
+            <AtButton icon="avatar" outlined />
+            <AtButton text="Button" icon="avatar" />
+            <AtButton text="Button" icon="avatar" outlined />
+            <AtButton text="Button" icon="avatar" icon-align="right" tag="button" />
+            <AtButton text="Button" outlined icon="avatar" icon-align="right" />
+        </CodePreview>
+
+        <Markdown>
+            ## Sizes
+        </Markdown>
+
+        <CodePreview vertical>
+            <AtButton text="Tiny" size="tiny" />
+            <AtButton text="Small" size="small" />
+            <AtButton text="Default" />
+            <AtButton text="Medium" size="medium" />
+            <AtButton text="Large" size="large" />
         </CodePreview>
     </Layout>
 </template>

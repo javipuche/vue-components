@@ -4,12 +4,29 @@
             # Banner
         </Markdown>
 
-        <CodePreview :vertical="true">
-            <AtBanner text="Button">
+        <CodePreview vertical>
+            <AtBanner
+                valign="bottom"
+                align="center"
+                text="Button"
+                shadow
+                radius
+            />
+        </CodePreview>
+
+        <CodePreview vertical>
+            <AtBanner
+                class="c-banner--orion"
+                valign="bottom"
+                align="center"
+                text="Button"
+                shadow
+                radius
+            >
                 <div class="c-banner__title">
                     asdadasd
                 </div>
-                <AtButton text="Leer más" :inverted="true" size="small" />
+                <AtButton text="Leer más" outlined size="small" />
             </AtBanner>
         </CodePreview>
     </Layout>

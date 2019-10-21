@@ -59,6 +59,9 @@
   .c-picture {
     --c-picture-ratio-width: 16;
     --c-picture-ratio-height: 9;
+    --c-picture-overlay: transparent;
+
+    overflow: hidden;
 
     &::before {
       display: block;
@@ -67,13 +70,20 @@
       content: "";
     }
 
-    img {
+    img,
+    &::after {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      background: var(--c-picture-overlay);
+      z-index: 2;
     }
   }
 </style>

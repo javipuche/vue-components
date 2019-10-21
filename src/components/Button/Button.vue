@@ -4,18 +4,20 @@
         class="c-button"
         :href="tag === 'a' && href"
         :class="{
-            'c-button--inverted' : inverted,
+            'c-button--outlined' : outlined,
             'c-button--tiny' : size && size === 'tiny',
             'c-button--small' : size && size === 'small',
             'c-button--medium' : size && size === 'medium',
-            'c-button--large' : size && size === 'large'
+            'c-button--large' : size && size === 'large',
+            'c-button--is-disabled' : disabled
         }"
+        :disabled="tag === 'button' && disabled"
     >
         <span
             v-if="icon"
             class="c-button__icon"
             :class="{
-                'c-button__icon--right': iconAlign === 'left' && text,
+                'c-button__icon--left': iconAlign === 'left' && text,
                 'c-button__icon--right': iconAlign === 'right' && text
             }"
         >
@@ -54,13 +56,17 @@
                 type: String,
                 default: 'left'
             },
-            inverted: {
+            outlined: {
                 type: Boolean,
                 default: false
             },
             size: {
                 type: String,
                 default: undefined
+            },
+            disabled: {
+                type: Boolean,
+                default: false
             }
         }
     }
@@ -135,7 +141,7 @@
       --c-button-background-color: var(--color-shade-500);
     }
 
-    &--inverted {
+    &--outlined {
       --c-button-background-color: transparent;
       --c-button-color: var(--color-shade-800);
       --c-button-border-color: var(--color-shade-800);
