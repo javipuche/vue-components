@@ -67,6 +67,10 @@
     --c-banner-overlay: transparent;
     --c-banner-picture-ratio-width: 13;
     --c-banner-picture-ratio-height: 17;
+    --c-banner-title-line-height: 1.4;
+    --c-banner-title-font-size: 1em;
+    --c-banner-title-color: #fff;
+    --c-banner-title-text-align: center;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -138,6 +142,13 @@
           align-items: flex-end;
         }
       }
+    }
+
+    &__title {
+      line-height: var(--c-banner-title-line-height);
+      font-size: var(--c-banner-title-font-size);
+      color: var(--c-banner-title-color);
+      text-align: var(--c-banner-title-text-align);
     }
   }
 </style>

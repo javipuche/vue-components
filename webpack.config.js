@@ -147,7 +147,8 @@ const webpackConfig = () => {
             mode: 'development',
             devtool: 'source-map',
             devServer: {
-                contentBase: './dist',
+                contentBase: './',
+                watchContentBase: true,
                 open: true,
                 compress: false,
                 hot: true,

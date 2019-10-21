@@ -15,19 +15,7 @@
         </CodePreview>
 
         <CodePreview vertical>
-            <AtBanner
-                class="c-banner--orion"
-                valign="bottom"
-                align="center"
-                text="Button"
-                shadow
-                radius
-            >
-                <div class="c-banner__title">
-                    asdadasd
-                </div>
-                <AtButton text="Leer más" outlined size="small" />
-            </AtBanner>
+            <AtBannerOrion />
         </CodePreview>
     </Layout>
 </template>
